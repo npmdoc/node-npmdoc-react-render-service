@@ -1,0 +1,5516 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/mic159/react-render">react-render-service (v1.0.0)</a>
+</h1>
+<h4>HTTP microservice for rendering React to HTML on the server side</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-render-service">module react-render-service</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.react-render-service">
+            function <span class="apidocSignatureSpan"></span>react-render-service
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service._router">
+            function <span class="apidocSignatureSpan">react-render-service.</span>_router
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.acl">
+            function <span class="apidocSignatureSpan">react-render-service.</span>acl
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.addListener">
+            function <span class="apidocSignatureSpan">react-render-service.</span>addListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.all">
+            function <span class="apidocSignatureSpan">react-render-service.</span>all
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app">
+            function <span class="apidocSignatureSpan">react-render-service.</span>app
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.checkout">
+            function <span class="apidocSignatureSpan">react-render-service.</span>checkout
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.connect">
+            function <span class="apidocSignatureSpan">react-render-service.</span>connect
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.copy">
+            function <span class="apidocSignatureSpan">react-render-service.</span>copy
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.defaultConfiguration">
+            function <span class="apidocSignatureSpan">react-render-service.</span>defaultConfiguration
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.del">
+            function <span class="apidocSignatureSpan">react-render-service.</span>del
+            <span class="apidocSignatureSpan">(arg0)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.delete">
+            function <span class="apidocSignatureSpan">react-render-service.</span>delete
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.disable">
+            function <span class="apidocSignatureSpan">react-render-service.</span>disable
+            <span class="apidocSignatureSpan">(setting)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.disabled">
+            function <span class="apidocSignatureSpan">react-render-service.</span>disabled
+            <span class="apidocSignatureSpan">(setting)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.emit">
+            function <span class="apidocSignatureSpan">react-render-service.</span>emit
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.enable">
+            function <span class="apidocSignatureSpan">react-render-service.</span>enable
+            <span class="apidocSignatureSpan">(setting)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.enabled">
+            function <span class="apidocSignatureSpan">react-render-service.</span>enabled
+            <span class="apidocSignatureSpan">(setting)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.engine">
+            function <span class="apidocSignatureSpan">react-render-service.</span>engine
+            <span class="apidocSignatureSpan">(ext, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.eventNames">
+            function <span class="apidocSignatureSpan">react-render-service.</span>eventNames
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.get">
+            function <span class="apidocSignatureSpan">react-render-service.</span>get
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.getMaxListeners">
+            function <span class="apidocSignatureSpan">react-render-service.</span>getMaxListeners
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.handle">
+            function <span class="apidocSignatureSpan">react-render-service.</span>handle
+            <span class="apidocSignatureSpan">(req, res, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.head">
+            function <span class="apidocSignatureSpan">react-render-service.</span>head
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.init">
+            function <span class="apidocSignatureSpan">react-render-service.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.lazyrouter">
+            function <span class="apidocSignatureSpan">react-render-service.</span>lazyrouter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.link">
+            function <span class="apidocSignatureSpan">react-render-service.</span>link
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.listen">
+            function <span class="apidocSignatureSpan">react-render-service.</span>listen
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.listenerCount">
+            function <span class="apidocSignatureSpan">react-render-service.</span>listenerCount
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.listeners">
+            function <span class="apidocSignatureSpan">react-render-service.</span>listeners
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.lock">
+            function <span class="apidocSignatureSpan">react-render-service.</span>lock
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.m-search">
+            function <span class="apidocSignatureSpan">react-render-service.</span>m-search
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.merge">
+            function <span class="apidocSignatureSpan">react-render-service.</span>merge
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.mkactivity">
+            function <span class="apidocSignatureSpan">react-render-service.</span>mkactivity
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.mkcalendar">
+            function <span class="apidocSignatureSpan">react-render-service.</span>mkcalendar
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.mkcol">
+            function <span class="apidocSignatureSpan">react-render-service.</span>mkcol
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.move">
+            function <span class="apidocSignatureSpan">react-render-service.</span>move
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.notify">
+            function <span class="apidocSignatureSpan">react-render-service.</span>notify
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.on">
+            function <span class="apidocSignatureSpan">react-render-service.</span>on
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.once">
+            function <span class="apidocSignatureSpan">react-render-service.</span>once
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.options">
+            function <span class="apidocSignatureSpan">react-render-service.</span>options
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.param">
+            function <span class="apidocSignatureSpan">react-render-service.</span>param
+            <span class="apidocSignatureSpan">(name, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.patch">
+            function <span class="apidocSignatureSpan">react-render-service.</span>patch
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.path">
+            function <span class="apidocSignatureSpan">react-render-service.</span>path
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.post">
+            function <span class="apidocSignatureSpan">react-render-service.</span>post
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.prependListener">
+            function <span class="apidocSignatureSpan">react-render-service.</span>prependListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.prependOnceListener">
+            function <span class="apidocSignatureSpan">react-render-service.</span>prependOnceListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.propfind">
+            function <span class="apidocSignatureSpan">react-render-service.</span>propfind
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.proppatch">
+            function <span class="apidocSignatureSpan">react-render-service.</span>proppatch
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.purge">
+            function <span class="apidocSignatureSpan">react-render-service.</span>purge
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.put">
+            function <span class="apidocSignatureSpan">react-render-service.</span>put
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.rebind">
+            function <span class="apidocSignatureSpan">react-render-service.</span>rebind
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.removeAllListeners">
+            function <span class="apidocSignatureSpan">react-render-service.</span>removeAllListeners
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.removeListener">
+            function <span class="apidocSignatureSpan">react-render-service.</span>removeListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.render">
+            function <span class="apidocSignatureSpan">react-render-service.</span>render
+            <span class="apidocSignatureSpan">(name, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.report">
+            function <span class="apidocSignatureSpan">react-render-service.</span>report
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.route">
+            function <span class="apidocSignatureSpan">react-render-service.</span>route
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.search">
+            function <span class="apidocSignatureSpan">react-render-service.</span>search
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.set">
+            function <span class="apidocSignatureSpan">react-render-service.</span>set
+            <span class="apidocSignatureSpan">(setting, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.setMaxListeners">
+            function <span class="apidocSignatureSpan">react-render-service.</span>setMaxListeners
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.settings.view">
+            function <span class="apidocSignatureSpan">react-render-service.</span>settings.view
+            <span class="apidocSignatureSpan">(name, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.subscribe">
+            function <span class="apidocSignatureSpan">react-render-service.</span>subscribe
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.trace">
+            function <span class="apidocSignatureSpan">react-render-service.</span>trace
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.unbind">
+            function <span class="apidocSignatureSpan">react-render-service.</span>unbind
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.unlink">
+            function <span class="apidocSignatureSpan">react-render-service.</span>unlink
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.unlock">
+            function <span class="apidocSignatureSpan">react-render-service.</span>unlock
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.unsubscribe">
+            function <span class="apidocSignatureSpan">react-render-service.</span>unsubscribe
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.use">
+            function <span class="apidocSignatureSpan">react-render-service.</span>use
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">react-render-service.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.</span>cache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.</span>engines</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.</span>locals</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.</span>request</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.</span>response</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.</span>settings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.</span>settings.view.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-render-service.</span>mountpath</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-render-service._events">module react-render-service._events</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service._events.mount">
+            function <span class="apidocSignatureSpan">react-render-service._events.</span>mount
+            <span class="apidocSignatureSpan">(parent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-render-service.app">module react-render-service.app</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.app">
+            function <span class="apidocSignatureSpan">react-render-service.</span>app
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app._router">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>_router
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.acl">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>acl
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.addListener">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>addListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.all">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>all
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.bind">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>bind
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.checkout">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>checkout
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.connect">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>connect
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.copy">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>copy
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.defaultConfiguration">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>defaultConfiguration
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.del">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>del
+            <span class="apidocSignatureSpan">(arg0)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.delete">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>delete
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.disable">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>disable
+            <span class="apidocSignatureSpan">(setting)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.disabled">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>disabled
+            <span class="apidocSignatureSpan">(setting)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.emit">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>emit
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.enable">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>enable
+            <span class="apidocSignatureSpan">(setting)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.enabled">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>enabled
+            <span class="apidocSignatureSpan">(setting)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.engine">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>engine
+            <span class="apidocSignatureSpan">(ext, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.eventNames">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>eventNames
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.get">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>get
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.getMaxListeners">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>getMaxListeners
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.handle">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>handle
+            <span class="apidocSignatureSpan">(req, res, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.head">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>head
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.init">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.lazyrouter">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>lazyrouter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.link">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>link
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.listen">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>listen
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.listenerCount">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>listenerCount
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.listeners">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>listeners
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.lock">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>lock
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.m-search">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>m-search
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.merge">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>merge
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.mkactivity">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>mkactivity
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.mkcalendar">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>mkcalendar
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.mkcol">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>mkcol
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.move">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>move
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.notify">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>notify
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.on">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>on
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.once">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>once
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.options">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>options
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.param">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>param
+            <span class="apidocSignatureSpan">(name, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.patch">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>patch
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.path">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>path
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.post">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>post
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.prependListener">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>prependListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.prependOnceListener">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>prependOnceListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.propfind">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>propfind
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.proppatch">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>proppatch
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.purge">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>purge
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.put">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>put
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.rebind">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>rebind
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.removeAllListeners">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>removeAllListeners
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.removeListener">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>removeListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.render">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>render
+            <span class="apidocSignatureSpan">(name, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.report">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>report
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.route">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>route
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.search">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>search
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.set">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>set
+            <span class="apidocSignatureSpan">(setting, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.setMaxListeners">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>setMaxListeners
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.subscribe">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>subscribe
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.trace">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>trace
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.unbind">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>unbind
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.unlink">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>unlink
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.unlock">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>unlock
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.unsubscribe">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>unsubscribe
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.app.use">
+            function <span class="apidocSignatureSpan">react-render-service.app.</span>use
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">react-render-service.app.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.app.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.app.</span>cache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.app.</span>engines</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.app.</span>locals</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.app.</span>request</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.app.</span>response</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-render-service.app.</span>settings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-render-service.app.</span>mountpath</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">undefined <span class="apidocSignatureSpan">react-render-service.app.</span>domain</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-render-service.request">module react-render-service.request</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.request.app">
+            function <span class="apidocSignatureSpan">react-render-service.request.</span>app
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-render-service.response">module react-render-service.response</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.response.app">
+            function <span class="apidocSignatureSpan">react-render-service.response.</span>app
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-render-service.settings">module react-render-service.settings</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">react-render-service.settings.</span>x-powered-by</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.settings.view">
+            function <span class="apidocSignatureSpan">react-render-service.settings.</span>view
+            <span class="apidocSignatureSpan">(name, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-render-service.settings.</span>env</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-render-service.settings.</span>etag</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-render-service.settings.</span>views</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-render-service.settings.view">module react-render-service.settings.view</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.settings.view.view">
+            function <span class="apidocSignatureSpan">react-render-service.settings.</span>view
+            <span class="apidocSignatureSpan">(name, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-render-service.settings.view.prototype">module react-render-service.settings.view.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.settings.view.prototype.lookup">
+            function <span class="apidocSignatureSpan">react-render-service.settings.view.prototype.</span>lookup
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.settings.view.prototype.render">
+            function <span class="apidocSignatureSpan">react-render-service.settings.view.prototype.</span>render
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-render-service.settings.view.prototype.resolve">
+            function <span class="apidocSignatureSpan">react-render-service.settings.view.prototype.</span>resolve
+            <span class="apidocSignatureSpan">(dir, file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-render-service" id="apidoc.module.react-render-service">module react-render-service</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.react-render-service" id="apidoc.element.react-render-service.react-render-service">
+        function <span class="apidocSignatureSpan"></span>react-render-service
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">react-render-service = function (req, res, next) {
+  app.handle(req, res, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service._router" id="apidoc.element.react-render-service._router">
+        function <span class="apidocSignatureSpan">react-render-service.</span>_router
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function router(req, res, next) {
+  router.handle(req, res, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.acl" id="apidoc.element.react-render-service.acl">
+        function <span class="apidocSignatureSpan">react-render-service.</span>acl
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">acl = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.addListener" id="apidoc.element.react-render-service.addListener">
+        function <span class="apidocSignatureSpan">react-render-service.</span>addListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addListener(type, listener) {
+  return _addListener(this, type, listener, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.all" id="apidoc.element.react-render-service.all">
+        function <span class="apidocSignatureSpan">react-render-service.</span>all
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function all(path) {
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  var args = slice.call(arguments, 1);
+
+  for (var i = 0; i &lt; methods.length; i++) {
+    route[methods[i]].apply(route, args);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app" id="apidoc.element.react-render-service.app">
+        function <span class="apidocSignatureSpan">react-render-service.</span>app
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">app = function (req, res, next) {
+  app.handle(req, res, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.checkout" id="apidoc.element.react-render-service.checkout">
+        function <span class="apidocSignatureSpan">react-render-service.</span>checkout
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkout = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.connect" id="apidoc.element.react-render-service.connect">
+        function <span class="apidocSignatureSpan">react-render-service.</span>connect
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.copy" id="apidoc.element.react-render-service.copy">
+        function <span class="apidocSignatureSpan">react-render-service.</span>copy
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">copy = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.defaultConfiguration" id="apidoc.element.react-render-service.defaultConfiguration">
+        function <span class="apidocSignatureSpan">react-render-service.</span>defaultConfiguration
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defaultConfiguration() {
+  var env = process.env.NODE_ENV || 'development';
+
+  // default settings
+  this.enable('x-powered-by');
+  this.set('etag', 'weak');
+  this.set('env', env);
+  this.set('query parser', 'extended');
+  this.set('subdomain offset', 2);
+  this.set('trust proxy', false);
+
+  // trust proxy inherit back-compat
+  Object.defineProperty(this.settings, trustProxyDefaultSymbol, {
+    configurable: true,
+    value: true
+  });
+
+  debug('booting in %s mode', env);
+
+  this.on('mount', function onmount(parent) {
+    // inherit trust proxy
+    if (this.settings[trustProxyDefaultSymbol] === true
+      &amp;&amp; typeof parent.settings['trust proxy fn'] === 'function') {
+      delete this.settings['trust proxy'];
+      delete this.settings['trust proxy fn'];
+    }
+
+    // inherit protos
+    setPrototyeOf(this.request, parent.request)
+    setPrototyeOf(this.response, parent.response)
+    setPrototyeOf(this.engines, parent.engines)
+    setPrototyeOf(this.settings, parent.settings)
+  });
+
+  // setup locals
+  this.locals = Object.create(null);
+
+  // top-most app is mounted at /
+  this.mountpath = '/';
+
+  // default locals
+  this.locals.settings = this.settings;
+
+  // default configuration
+  this.set('view', View);
+  this.set('views', resolve('views'));
+  this.set('jsonp callback name', 'callback');
+
+  if (env === 'production') {
+    this.enable('view cache');
+  }
+
+  Object.defineProperty(this, 'router', {
+    get: function() {
+      throw new Error('\'app.router\' is deprecated!\nPlease see the 3.x to 4.x migration guide for details on how to update your
+ app.');
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.del" id="apidoc.element.react-render-service.del">
+        function <span class="apidocSignatureSpan">react-render-service.</span>del
+        <span class="apidocSignatureSpan">(arg0)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">del = function (arg0) {
+"use strict"
+log.call(deprecate, message, site)
+return fn.apply(this, arguments)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.delete" id="apidoc.element.react-render-service.delete">
+        function <span class="apidocSignatureSpan">react-render-service.</span>delete
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.disable" id="apidoc.element.react-render-service.disable">
+        function <span class="apidocSignatureSpan">react-render-service.</span>disable
+        <span class="apidocSignatureSpan">(setting)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function disable(setting) {
+  return this.set(setting, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.disabled" id="apidoc.element.react-render-service.disabled">
+        function <span class="apidocSignatureSpan">react-render-service.</span>disabled
+        <span class="apidocSignatureSpan">(setting)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function disabled(setting) {
+  return !this.set(setting);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.emit" id="apidoc.element.react-render-service.emit">
+        function <span class="apidocSignatureSpan">react-render-service.</span>emit
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emit(type) {
+  var er, handler, len, args, i, events, domain;
+  var needDomainExit = false;
+  var doError = (type === 'error');
+
+  events = this._events;
+  if (events)
+    doError = (doError &amp;&amp; events.error == null);
+  else if (!doError)
+    return false;
+
+  domain = this.domain;
+
+  // If there is no 'error' event listener then throw.
+  if (doError) {
+    er = arguments[1];
+    if (domain) {
+      if (!er)
+        er = new Error('Uncaught, unspecified "error" event');
+      er.domainEmitter = this;
+      er.domain = domain;
+      er.domainThrown = false;
+      domain.emit('error', er);
+    } else if (er instanceof Error) {
+      throw er; // Unhandled 'error' event
+    } else {
+      // At least give some kind of context to the user
+      var err = new Error('Uncaught, unspecified "error" event. (' + er + ')');
+      err.context = er;
+      throw err;
+    }
+    return false;
+  }
+
+  handler = events[type];
+
+  if (!handler)
+    return false;
+
+  if (domain &amp;&amp; this !== process) {
+    domain.enter();
+    needDomainExit = true;
+  }
+
+  var isFn = typeof handler === 'function';
+  len = arguments.length;
+  switch (len) {
+    // fast cases
+    case 1:
+      emitNone(handler, isFn, this);
+      break;
+    case 2:
+      emitOne(handler, isFn, this, arguments[1]);
+      break;
+    case 3:
+      emitTwo(handler, isFn, this, arguments[1], arguments[2]);
+      break;
+    case 4:
+      emitThree(handler, isFn, this, arguments[1], arguments[2], arguments[3]);
+      break;
+    // slower
+    default:
+      args = new Array(len - 1);
+      for (i = 1; i &lt; len; i++)
+        args[i - 1] = arguments[i];
+      emitMany(handler, isFn, this, args);
+  }
+
+  if (needDomainExit)
+    domain.exit();
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.enable" id="apidoc.element.react-render-service.enable">
+        function <span class="apidocSignatureSpan">react-render-service.</span>enable
+        <span class="apidocSignatureSpan">(setting)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function enable(setting) {
+  return this.set(setting, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.enabled" id="apidoc.element.react-render-service.enabled">
+        function <span class="apidocSignatureSpan">react-render-service.</span>enabled
+        <span class="apidocSignatureSpan">(setting)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function enabled(setting) {
+  return Boolean(this.set(setting));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.engine" id="apidoc.element.react-render-service.engine">
+        function <span class="apidocSignatureSpan">react-render-service.</span>engine
+        <span class="apidocSignatureSpan">(ext, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function engine(ext, fn) {
+  if (typeof fn !== 'function') {
+    throw new Error('callback function required');
+  }
+
+  // get file extension
+  var extension = ext[0] !== '.'
+    ? '.' + ext
+    : ext;
+
+  // store engine
+  this.engines[extension] = fn;
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.eventNames" id="apidoc.element.react-render-service.eventNames">
+        function <span class="apidocSignatureSpan">react-render-service.</span>eventNames
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function eventNames() {
+  return this._eventsCount &gt; 0 ? Reflect.ownKeys(this._events) : [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.get" id="apidoc.element.react-render-service.get">
+        function <span class="apidocSignatureSpan">react-render-service.</span>get
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.getMaxListeners" id="apidoc.element.react-render-service.getMaxListeners">
+        function <span class="apidocSignatureSpan">react-render-service.</span>getMaxListeners
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getMaxListeners() {
+  return $getMaxListeners(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.handle" id="apidoc.element.react-render-service.handle">
+        function <span class="apidocSignatureSpan">react-render-service.</span>handle
+        <span class="apidocSignatureSpan">(req, res, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handle(req, res, callback) {
+  var router = this._router;
+
+  // final handler
+  var done = callback || finalhandler(req, res, {
+    env: this.get('env'),
+    onerror: logerror.bind(this)
+  });
+
+  // no routes
+  if (!router) {
+    debug('no routes defined on app');
+    done();
+    return;
+  }
+
+  router.handle(req, res, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.head" id="apidoc.element.react-render-service.head">
+        function <span class="apidocSignatureSpan">react-render-service.</span>head
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">head = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.init" id="apidoc.element.react-render-service.init">
+        function <span class="apidocSignatureSpan">react-render-service.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init() {
+  this.cache = {};
+  this.engines = {};
+  this.settings = {};
+
+  this.defaultConfiguration();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.lazyrouter" id="apidoc.element.react-render-service.lazyrouter">
+        function <span class="apidocSignatureSpan">react-render-service.</span>lazyrouter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lazyrouter() {
+  if (!this._router) {
+    this._router = new Router({
+      caseSensitive: this.enabled('case sensitive routing'),
+      strict: this.enabled('strict routing')
+    });
+
+    this._router.use(query(this.get('query parser fn')));
+    this._router.use(middleware.init(this));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.link" id="apidoc.element.react-render-service.link">
+        function <span class="apidocSignatureSpan">react-render-service.</span>link
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">link = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.listen" id="apidoc.element.react-render-service.listen">
+        function <span class="apidocSignatureSpan">react-render-service.</span>listen
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listen() {
+  var server = http.createServer(this);
+  return server.listen.apply(server, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+app.use(function errorHandler(err, request, response, next) {
+  console.log('[' + new Date().toISOString() + '] ' + err.stack);
+  response.status(500).send(argv.debug ? err.stack : err.toString());
+});
+
+var server = app.<span class="apidocCodeKeywordSpan">listen</span>(argv.port || 63578, argv.host || 'localhost', function
+() {
+  console.log('Started server at http://%s:%s', server.address().address, server.address().port);
+});
+
+module.exports = app;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.listenerCount" id="apidoc.element.react-render-service.listenerCount">
+        function <span class="apidocSignatureSpan">react-render-service.</span>listenerCount
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listenerCount(type) {
+  const events = this._events;
+
+  if (events) {
+    const evlistener = events[type];
+
+    if (typeof evlistener === 'function') {
+      return 1;
+    } else if (evlistener) {
+      return evlistener.length;
+    }
+  }
+
+  return 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.listeners" id="apidoc.element.react-render-service.listeners">
+        function <span class="apidocSignatureSpan">react-render-service.</span>listeners
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listeners(type) {
+  var evlistener;
+  var ret;
+  var events = this._events;
+
+  if (!events)
+    ret = [];
+  else {
+    evlistener = events[type];
+    if (!evlistener)
+      ret = [];
+    else if (typeof evlistener === 'function')
+      ret = [evlistener];
+    else
+      ret = arrayClone(evlistener, evlistener.length);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.lock" id="apidoc.element.react-render-service.lock">
+        function <span class="apidocSignatureSpan">react-render-service.</span>lock
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lock = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.m-search" id="apidoc.element.react-render-service.m-search">
+        function <span class="apidocSignatureSpan">react-render-service.</span>m-search
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">m-search = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.merge" id="apidoc.element.react-render-service.merge">
+        function <span class="apidocSignatureSpan">react-render-service.</span>merge
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">merge = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.mkactivity" id="apidoc.element.react-render-service.mkactivity">
+        function <span class="apidocSignatureSpan">react-render-service.</span>mkactivity
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkactivity = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.mkcalendar" id="apidoc.element.react-render-service.mkcalendar">
+        function <span class="apidocSignatureSpan">react-render-service.</span>mkcalendar
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkcalendar = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.mkcol" id="apidoc.element.react-render-service.mkcol">
+        function <span class="apidocSignatureSpan">react-render-service.</span>mkcol
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkcol = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.move" id="apidoc.element.react-render-service.move">
+        function <span class="apidocSignatureSpan">react-render-service.</span>move
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">move = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.notify" id="apidoc.element.react-render-service.notify">
+        function <span class="apidocSignatureSpan">react-render-service.</span>notify
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notify = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.on" id="apidoc.element.react-render-service.on">
+        function <span class="apidocSignatureSpan">react-render-service.</span>on
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addListener(type, listener) {
+  return _addListener(this, type, listener, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.once" id="apidoc.element.react-render-service.once">
+        function <span class="apidocSignatureSpan">react-render-service.</span>once
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function once(type, listener) {
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+  this.on(type, _onceWrap(this, type, listener));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.options" id="apidoc.element.react-render-service.options">
+        function <span class="apidocSignatureSpan">react-render-service.</span>options
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">options = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.param" id="apidoc.element.react-render-service.param">
+        function <span class="apidocSignatureSpan">react-render-service.</span>param
+        <span class="apidocSignatureSpan">(name, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function param(name, fn) {
+  this.lazyrouter();
+
+  if (Array.isArray(name)) {
+    for (var i = 0; i &lt; name.length; i++) {
+      this.param(name[i], fn);
+    }
+
+    return this;
+  }
+
+  this._router.param(name, fn);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.patch" id="apidoc.element.react-render-service.patch">
+        function <span class="apidocSignatureSpan">react-render-service.</span>patch
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">patch = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.path" id="apidoc.element.react-render-service.path">
+        function <span class="apidocSignatureSpan">react-render-service.</span>path
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function path() {
+  return this.parent
+    ? this.parent.path() + this.mountpath
+    : '';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.post" id="apidoc.element.react-render-service.post">
+        function <span class="apidocSignatureSpan">react-render-service.</span>post
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">post = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (toStaticMarkup) {
+  callback(ReactDOMServer.renderToStaticMarkup(element));
+} else {
+  callback(ReactDOMServer.renderToString(element));
+}
+};
+
+app.<span class="apidocCodeKeywordSpan">post</span>('/render', function service(request, response) {
+var toStaticMarkup = request.body.to_static_markup || false;
+var pathToSource = request.body.path_to_source;
+var props = request.body.props || {};
+
+if (!pathToSource) {
+  return response.status(400).send('path_to_source required');
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.prependListener" id="apidoc.element.react-render-service.prependListener">
+        function <span class="apidocSignatureSpan">react-render-service.</span>prependListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prependListener(type, listener) {
+  return _addListener(this, type, listener, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.prependOnceListener" id="apidoc.element.react-render-service.prependOnceListener">
+        function <span class="apidocSignatureSpan">react-render-service.</span>prependOnceListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prependOnceListener(type, listener) {
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+  this.prependListener(type, _onceWrap(this, type, listener));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.propfind" id="apidoc.element.react-render-service.propfind">
+        function <span class="apidocSignatureSpan">react-render-service.</span>propfind
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">propfind = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.proppatch" id="apidoc.element.react-render-service.proppatch">
+        function <span class="apidocSignatureSpan">react-render-service.</span>proppatch
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">proppatch = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.purge" id="apidoc.element.react-render-service.purge">
+        function <span class="apidocSignatureSpan">react-render-service.</span>purge
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">purge = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.put" id="apidoc.element.react-render-service.put">
+        function <span class="apidocSignatureSpan">react-render-service.</span>put
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">put = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.rebind" id="apidoc.element.react-render-service.rebind">
+        function <span class="apidocSignatureSpan">react-render-service.</span>rebind
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rebind = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.removeAllListeners" id="apidoc.element.react-render-service.removeAllListeners">
+        function <span class="apidocSignatureSpan">react-render-service.</span>removeAllListeners
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeAllListeners(type) {
+  var listeners, events;
+
+  events = this._events;
+  if (!events)
+    return this;
+
+  // not listening for removeListener, no need to emit
+  if (!events.removeListener) {
+    if (arguments.length === 0) {
+      this._events = new EventHandlers();
+      this._eventsCount = 0;
+    } else if (events[type]) {
+      if (--this._eventsCount === 0)
+        this._events = new EventHandlers();
+      else
+        delete events[type];
+    }
+    return this;
+  }
+
+  // emit removeListener for all listeners on all events
+  if (arguments.length === 0) {
+    var keys = Object.keys(events);
+    for (var i = 0, key; i &lt; keys.length; ++i) {
+      key = keys[i];
+      if (key === 'removeListener') continue;
+      this.removeAllListeners(key);
+    }
+    this.removeAllListeners('removeListener');
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+    return this;
+  }
+
+  listeners = events[type];
+
+  if (typeof listeners === 'function') {
+    this.removeListener(type, listeners);
+  } else if (listeners) {
+    // LIFO order
+    do {
+      this.removeListener(type, listeners[listeners.length - 1]);
+    } while (listeners[0]);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.removeListener" id="apidoc.element.react-render-service.removeListener">
+        function <span class="apidocSignatureSpan">react-render-service.</span>removeListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeListener(type, listener) {
+  var list, events, position, i, originalListener;
+
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+
+  events = this._events;
+  if (!events)
+    return this;
+
+  list = events[type];
+  if (!list)
+    return this;
+
+  if (list === listener || list.listener === listener) {
+    if (--this._eventsCount === 0)
+      this._events = new EventHandlers();
+    else {
+      delete events[type];
+      if (events.removeListener)
+        this.emit('removeListener', type, list.listener || listener);
+    }
+  } else if (typeof list !== 'function') {
+    position = -1;
+
+    for (i = list.length; i-- &gt; 0;) {
+      if (list[i] === listener || list[i].listener === listener) {
+        originalListener = list[i].listener;
+        position = i;
+        break;
+      }
+    }
+
+    if (position &lt; 0)
+      return this;
+
+    if (list.length === 1) {
+      list[0] = undefined;
+      if (--this._eventsCount === 0) {
+        this._events = new EventHandlers();
+        return this;
+      } else {
+        delete events[type];
+      }
+    } else {
+      spliceOne(list, position);
+    }
+
+    if (events.removeListener)
+      this.emit('removeListener', type, originalListener || listener);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.render" id="apidoc.element.react-render-service.render">
+        function <span class="apidocSignatureSpan">react-render-service.</span>render
+        <span class="apidocSignatureSpan">(name, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function render(name, options, callback) {
+  var cache = this.cache;
+  var done = callback;
+  var engines = this.engines;
+  var opts = options;
+  var renderOptions = {};
+  var view;
+
+  // support callback function as second arg
+  if (typeof options === 'function') {
+    done = options;
+    opts = {};
+  }
+
+  // merge app.locals
+  merge(renderOptions, this.locals);
+
+  // merge options._locals
+  if (opts._locals) {
+    merge(renderOptions, opts._locals);
+  }
+
+  // merge options
+  merge(renderOptions, opts);
+
+  // set .cache unless explicitly provided
+  if (renderOptions.cache == null) {
+    renderOptions.cache = this.enabled('view cache');
+  }
+
+  // primed cache
+  if (renderOptions.cache) {
+    view = cache[name];
+  }
+
+  // view
+  if (!view) {
+    var View = this.get('view');
+
+    view = new View(name, {
+      defaultEngine: this.get('view engine'),
+      root: this.get('views'),
+      engines: engines
+    });
+
+    if (!view.path) {
+      var dirs = Array.isArray(view.root) &amp;&amp; view.root.length &gt; 1
+        ? 'directories "' + view.root.slice(0, -1).join('", "') + '" or "' + view.root[view.root.length - 1] + '"'
+        : 'directory "' + view.root + '"'
+      var err = new Error('Failed to lookup view "' + name + '" in views ' + dirs);
+      err.view = view;
+      return done(err);
+    }
+
+    // prime the cache
+    if (renderOptions.cache) {
+      cache[name] = view;
+    }
+  }
+
+  // render
+  tryRender(view, renderOptions, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (!(pathToSource in cache)) {
+  console.log('[%s] Loading new component %s', new Date().toISOString(), pathToSource);
+  cache[pathToSource] = new Component(pathToSource);
+}
+var component = cache[pathToSource];
+
+component.<span class="apidocCodeKeywordSpan">render</span>(props, toStaticMarkup, function(output) {
+  response.send(output);
+});
+});
+
+app.use(function errorHandler(err, request, response, next) {
+console.log('[' + new Date().toISOString() + '] ' + err.stack);
+response.status(500).send(argv.debug ? err.stack : err.toString());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.report" id="apidoc.element.react-render-service.report">
+        function <span class="apidocSignatureSpan">react-render-service.</span>report
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">report = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.route" id="apidoc.element.react-render-service.route">
+        function <span class="apidocSignatureSpan">react-render-service.</span>route
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function route(path) {
+  this.lazyrouter();
+  return this._router.route(path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.search" id="apidoc.element.react-render-service.search">
+        function <span class="apidocSignatureSpan">react-render-service.</span>search
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">search = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.set" id="apidoc.element.react-render-service.set">
+        function <span class="apidocSignatureSpan">react-render-service.</span>set
+        <span class="apidocSignatureSpan">(setting, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function set(setting, val) {
+  if (arguments.length === 1) {
+    // app.get(setting)
+    return this.settings[setting];
+  }
+
+  debug('set "%s" to %o', setting, val);
+
+  // set value
+  this.settings[setting] = val;
+
+  // trigger matched settings
+  switch (setting) {
+    case 'etag':
+      this.set('etag fn', compileETag(val));
+      break;
+    case 'query parser':
+      this.set('query parser fn', compileQueryParser(val));
+      break;
+    case 'trust proxy':
+      this.set('trust proxy fn', compileTrust(val));
+
+      // trust proxy inherit back-compat
+      Object.defineProperty(this.settings, trustProxyDefaultSymbol, {
+        configurable: true,
+        value: false
+      });
+
+      break;
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.setMaxListeners" id="apidoc.element.react-render-service.setMaxListeners">
+        function <span class="apidocSignatureSpan">react-render-service.</span>setMaxListeners
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setMaxListeners(n) {
+  if (typeof n !== 'number' || n &lt; 0 || isNaN(n))
+    throw new TypeError('"n" argument must be a positive number');
+  this._maxListeners = n;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.settings.view" id="apidoc.element.react-render-service.settings.view">
+        function <span class="apidocSignatureSpan">react-render-service.</span>settings.view
+        <span class="apidocSignatureSpan">(name, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function View(name, options) {
+  var opts = options || {};
+
+  this.defaultEngine = opts.defaultEngine;
+  this.ext = extname(name);
+  this.name = name;
+  this.root = opts.root;
+
+  if (!this.ext &amp;&amp; !this.defaultEngine) {
+    throw new Error('No default engine was specified and no extension was provided.');
+  }
+
+  var fileName = name;
+
+  if (!this.ext) {
+    // get extension from default engine name
+    this.ext = this.defaultEngine[0] !== '.'
+      ? '.' + this.defaultEngine
+      : this.defaultEngine;
+
+    fileName += this.ext;
+  }
+
+  if (!opts.engines[this.ext]) {
+    // load engine
+    var mod = this.ext.substr(1)
+    debug('require "%s"', mod)
+    opts.engines[this.ext] = require(mod).__express
+  }
+
+  // store loaded engine
+  this.engine = opts.engines[this.ext];
+
+  // lookup path
+  this.path = this.lookup(fileName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.subscribe" id="apidoc.element.react-render-service.subscribe">
+        function <span class="apidocSignatureSpan">react-render-service.</span>subscribe
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscribe = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.trace" id="apidoc.element.react-render-service.trace">
+        function <span class="apidocSignatureSpan">react-render-service.</span>trace
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trace = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.unbind" id="apidoc.element.react-render-service.unbind">
+        function <span class="apidocSignatureSpan">react-render-service.</span>unbind
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unbind = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.unlink" id="apidoc.element.react-render-service.unlink">
+        function <span class="apidocSignatureSpan">react-render-service.</span>unlink
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unlink = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.unlock" id="apidoc.element.react-render-service.unlock">
+        function <span class="apidocSignatureSpan">react-render-service.</span>unlock
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unlock = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.unsubscribe" id="apidoc.element.react-render-service.unsubscribe">
+        function <span class="apidocSignatureSpan">react-render-service.</span>unsubscribe
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unsubscribe = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.use" id="apidoc.element.react-render-service.use">
+        function <span class="apidocSignatureSpan">react-render-service.</span>use
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function use(fn) {
+  var offset = 0;
+  var path = '/';
+
+  // default path to '/'
+  // disambiguate app.use([fn])
+  if (typeof fn !== 'function') {
+    var arg = fn;
+
+    while (Array.isArray(arg) &amp;&amp; arg.length !== 0) {
+      arg = arg[0];
+    }
+
+    // first arg is the path
+    if (typeof arg !== 'function') {
+      offset = 1;
+      path = fn;
+    }
+  }
+
+  var fns = flatten(slice.call(arguments, offset));
+
+  if (fns.length === 0) {
+    throw new TypeError('app.use() requires middleware functions');
+  }
+
+  // setup router
+  this.lazyrouter();
+  var router = this._router;
+
+  fns.forEach(function (fn) {
+    // non-express app
+    if (!fn || !fn.handle || !fn.set) {
+      return router.use(path, fn);
+    }
+
+    debug('.use app under %s', path);
+    fn.mountpath = path;
+    fn.parent = this;
+
+    // restore .app property on req and res
+    router.use(path, function mounted_app(req, res, next) {
+      var orig = req.app;
+      fn.handle(req, res, function (err) {
+        setPrototyeOf(req, orig.request)
+        setPrototyeOf(res, orig.response)
+        next(err);
+      });
+    });
+
+    // mounted an app
+    fn.emit('mount', this);
+  }, this);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+.default('whitelist', process.env.REACT_WHITELIST)
+.help('h').alias('h', 'help')
+.argv;
+
+morgan.token('file', function(req, res){ return path.basename(req.body.path_to_source); });
+
+var app = express();
+app.<span class="apidocCodeKeywordSpan">use</span>(bodyParser.json({limit: '50mb'}));
+app.use(morgan('[:date[iso]] :method :url :status :response-time ms - :file :res[content-length]'));
+
+// Component cache living in global scope
+var cache = {};
+
+var Component = function Component(pathToSource) {
+this.pathToSource = pathToSource;
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-render-service._events" id="apidoc.module.react-render-service._events">module react-render-service._events</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service._events.mount" id="apidoc.element.react-render-service._events.mount">
+        function <span class="apidocSignatureSpan">react-render-service._events.</span>mount
+        <span class="apidocSignatureSpan">(parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onmount(parent) {
+  // inherit trust proxy
+  if (this.settings[trustProxyDefaultSymbol] === true
+    &amp;&amp; typeof parent.settings['trust proxy fn'] === 'function') {
+    delete this.settings['trust proxy'];
+    delete this.settings['trust proxy fn'];
+  }
+
+  // inherit protos
+  setPrototyeOf(this.request, parent.request)
+  setPrototyeOf(this.response, parent.response)
+  setPrototyeOf(this.engines, parent.engines)
+  setPrototyeOf(this.settings, parent.settings)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-render-service.app" id="apidoc.module.react-render-service.app">module react-render-service.app</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.app" id="apidoc.element.react-render-service.app.app">
+        function <span class="apidocSignatureSpan">react-render-service.</span>app
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">app = function (req, res, next) {
+  app.handle(req, res, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app._router" id="apidoc.element.react-render-service.app._router">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>_router
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function router(req, res, next) {
+  router.handle(req, res, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.acl" id="apidoc.element.react-render-service.app.acl">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>acl
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">acl = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.addListener" id="apidoc.element.react-render-service.app.addListener">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>addListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addListener(type, listener) {
+  return _addListener(this, type, listener, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.all" id="apidoc.element.react-render-service.app.all">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>all
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function all(path) {
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  var args = slice.call(arguments, 1);
+
+  for (var i = 0; i &lt; methods.length; i++) {
+    route[methods[i]].apply(route, args);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.bind" id="apidoc.element.react-render-service.app.bind">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>bind
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bind = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.checkout" id="apidoc.element.react-render-service.app.checkout">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>checkout
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkout = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.connect" id="apidoc.element.react-render-service.app.connect">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>connect
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.copy" id="apidoc.element.react-render-service.app.copy">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>copy
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">copy = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.defaultConfiguration" id="apidoc.element.react-render-service.app.defaultConfiguration">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>defaultConfiguration
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defaultConfiguration() {
+  var env = process.env.NODE_ENV || 'development';
+
+  // default settings
+  this.enable('x-powered-by');
+  this.set('etag', 'weak');
+  this.set('env', env);
+  this.set('query parser', 'extended');
+  this.set('subdomain offset', 2);
+  this.set('trust proxy', false);
+
+  // trust proxy inherit back-compat
+  Object.defineProperty(this.settings, trustProxyDefaultSymbol, {
+    configurable: true,
+    value: true
+  });
+
+  debug('booting in %s mode', env);
+
+  this.on('mount', function onmount(parent) {
+    // inherit trust proxy
+    if (this.settings[trustProxyDefaultSymbol] === true
+      &amp;&amp; typeof parent.settings['trust proxy fn'] === 'function') {
+      delete this.settings['trust proxy'];
+      delete this.settings['trust proxy fn'];
+    }
+
+    // inherit protos
+    setPrototyeOf(this.request, parent.request)
+    setPrototyeOf(this.response, parent.response)
+    setPrototyeOf(this.engines, parent.engines)
+    setPrototyeOf(this.settings, parent.settings)
+  });
+
+  // setup locals
+  this.locals = Object.create(null);
+
+  // top-most app is mounted at /
+  this.mountpath = '/';
+
+  // default locals
+  this.locals.settings = this.settings;
+
+  // default configuration
+  this.set('view', View);
+  this.set('views', resolve('views'));
+  this.set('jsonp callback name', 'callback');
+
+  if (env === 'production') {
+    this.enable('view cache');
+  }
+
+  Object.defineProperty(this, 'router', {
+    get: function() {
+      throw new Error('\'app.router\' is deprecated!\nPlease see the 3.x to 4.x migration guide for details on how to update your
+ app.');
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.del" id="apidoc.element.react-render-service.app.del">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>del
+        <span class="apidocSignatureSpan">(arg0)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">del = function (arg0) {
+"use strict"
+log.call(deprecate, message, site)
+return fn.apply(this, arguments)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.delete" id="apidoc.element.react-render-service.app.delete">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>delete
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.disable" id="apidoc.element.react-render-service.app.disable">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>disable
+        <span class="apidocSignatureSpan">(setting)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function disable(setting) {
+  return this.set(setting, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.disabled" id="apidoc.element.react-render-service.app.disabled">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>disabled
+        <span class="apidocSignatureSpan">(setting)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function disabled(setting) {
+  return !this.set(setting);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.emit" id="apidoc.element.react-render-service.app.emit">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>emit
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emit(type) {
+  var er, handler, len, args, i, events, domain;
+  var needDomainExit = false;
+  var doError = (type === 'error');
+
+  events = this._events;
+  if (events)
+    doError = (doError &amp;&amp; events.error == null);
+  else if (!doError)
+    return false;
+
+  domain = this.domain;
+
+  // If there is no 'error' event listener then throw.
+  if (doError) {
+    er = arguments[1];
+    if (domain) {
+      if (!er)
+        er = new Error('Uncaught, unspecified "error" event');
+      er.domainEmitter = this;
+      er.domain = domain;
+      er.domainThrown = false;
+      domain.emit('error', er);
+    } else if (er instanceof Error) {
+      throw er; // Unhandled 'error' event
+    } else {
+      // At least give some kind of context to the user
+      var err = new Error('Uncaught, unspecified "error" event. (' + er + ')');
+      err.context = er;
+      throw err;
+    }
+    return false;
+  }
+
+  handler = events[type];
+
+  if (!handler)
+    return false;
+
+  if (domain &amp;&amp; this !== process) {
+    domain.enter();
+    needDomainExit = true;
+  }
+
+  var isFn = typeof handler === 'function';
+  len = arguments.length;
+  switch (len) {
+    // fast cases
+    case 1:
+      emitNone(handler, isFn, this);
+      break;
+    case 2:
+      emitOne(handler, isFn, this, arguments[1]);
+      break;
+    case 3:
+      emitTwo(handler, isFn, this, arguments[1], arguments[2]);
+      break;
+    case 4:
+      emitThree(handler, isFn, this, arguments[1], arguments[2], arguments[3]);
+      break;
+    // slower
+    default:
+      args = new Array(len - 1);
+      for (i = 1; i &lt; len; i++)
+        args[i - 1] = arguments[i];
+      emitMany(handler, isFn, this, args);
+  }
+
+  if (needDomainExit)
+    domain.exit();
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.enable" id="apidoc.element.react-render-service.app.enable">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>enable
+        <span class="apidocSignatureSpan">(setting)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function enable(setting) {
+  return this.set(setting, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.enabled" id="apidoc.element.react-render-service.app.enabled">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>enabled
+        <span class="apidocSignatureSpan">(setting)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function enabled(setting) {
+  return Boolean(this.set(setting));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.engine" id="apidoc.element.react-render-service.app.engine">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>engine
+        <span class="apidocSignatureSpan">(ext, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function engine(ext, fn) {
+  if (typeof fn !== 'function') {
+    throw new Error('callback function required');
+  }
+
+  // get file extension
+  var extension = ext[0] !== '.'
+    ? '.' + ext
+    : ext;
+
+  // store engine
+  this.engines[extension] = fn;
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.eventNames" id="apidoc.element.react-render-service.app.eventNames">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>eventNames
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function eventNames() {
+  return this._eventsCount &gt; 0 ? Reflect.ownKeys(this._events) : [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.get" id="apidoc.element.react-render-service.app.get">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>get
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.getMaxListeners" id="apidoc.element.react-render-service.app.getMaxListeners">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>getMaxListeners
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getMaxListeners() {
+  return $getMaxListeners(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.handle" id="apidoc.element.react-render-service.app.handle">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>handle
+        <span class="apidocSignatureSpan">(req, res, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handle(req, res, callback) {
+  var router = this._router;
+
+  // final handler
+  var done = callback || finalhandler(req, res, {
+    env: this.get('env'),
+    onerror: logerror.bind(this)
+  });
+
+  // no routes
+  if (!router) {
+    debug('no routes defined on app');
+    done();
+    return;
+  }
+
+  router.handle(req, res, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.head" id="apidoc.element.react-render-service.app.head">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>head
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">head = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.init" id="apidoc.element.react-render-service.app.init">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init() {
+  this.cache = {};
+  this.engines = {};
+  this.settings = {};
+
+  this.defaultConfiguration();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.lazyrouter" id="apidoc.element.react-render-service.app.lazyrouter">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>lazyrouter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lazyrouter() {
+  if (!this._router) {
+    this._router = new Router({
+      caseSensitive: this.enabled('case sensitive routing'),
+      strict: this.enabled('strict routing')
+    });
+
+    this._router.use(query(this.get('query parser fn')));
+    this._router.use(middleware.init(this));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.link" id="apidoc.element.react-render-service.app.link">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>link
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">link = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.listen" id="apidoc.element.react-render-service.app.listen">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>listen
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listen() {
+  var server = http.createServer(this);
+  return server.listen.apply(server, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+app.use(function errorHandler(err, request, response, next) {
+  console.log('[' + new Date().toISOString() + '] ' + err.stack);
+  response.status(500).send(argv.debug ? err.stack : err.toString());
+});
+
+var server = app.<span class="apidocCodeKeywordSpan">listen</span>(argv.port || 63578, argv.host || 'localhost', function
+() {
+  console.log('Started server at http://%s:%s', server.address().address, server.address().port);
+});
+
+module.exports = app;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.listenerCount" id="apidoc.element.react-render-service.app.listenerCount">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>listenerCount
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listenerCount(type) {
+  const events = this._events;
+
+  if (events) {
+    const evlistener = events[type];
+
+    if (typeof evlistener === 'function') {
+      return 1;
+    } else if (evlistener) {
+      return evlistener.length;
+    }
+  }
+
+  return 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.listeners" id="apidoc.element.react-render-service.app.listeners">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>listeners
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listeners(type) {
+  var evlistener;
+  var ret;
+  var events = this._events;
+
+  if (!events)
+    ret = [];
+  else {
+    evlistener = events[type];
+    if (!evlistener)
+      ret = [];
+    else if (typeof evlistener === 'function')
+      ret = [evlistener];
+    else
+      ret = arrayClone(evlistener, evlistener.length);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.lock" id="apidoc.element.react-render-service.app.lock">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>lock
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lock = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.m-search" id="apidoc.element.react-render-service.app.m-search">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>m-search
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">m-search = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.merge" id="apidoc.element.react-render-service.app.merge">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>merge
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">merge = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.mkactivity" id="apidoc.element.react-render-service.app.mkactivity">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>mkactivity
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkactivity = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.mkcalendar" id="apidoc.element.react-render-service.app.mkcalendar">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>mkcalendar
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkcalendar = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.mkcol" id="apidoc.element.react-render-service.app.mkcol">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>mkcol
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkcol = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.move" id="apidoc.element.react-render-service.app.move">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>move
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">move = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.notify" id="apidoc.element.react-render-service.app.notify">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>notify
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notify = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.on" id="apidoc.element.react-render-service.app.on">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>on
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addListener(type, listener) {
+  return _addListener(this, type, listener, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.once" id="apidoc.element.react-render-service.app.once">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>once
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function once(type, listener) {
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+  this.on(type, _onceWrap(this, type, listener));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.options" id="apidoc.element.react-render-service.app.options">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>options
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">options = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.param" id="apidoc.element.react-render-service.app.param">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>param
+        <span class="apidocSignatureSpan">(name, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function param(name, fn) {
+  this.lazyrouter();
+
+  if (Array.isArray(name)) {
+    for (var i = 0; i &lt; name.length; i++) {
+      this.param(name[i], fn);
+    }
+
+    return this;
+  }
+
+  this._router.param(name, fn);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.patch" id="apidoc.element.react-render-service.app.patch">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>patch
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">patch = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.path" id="apidoc.element.react-render-service.app.path">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>path
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function path() {
+  return this.parent
+    ? this.parent.path() + this.mountpath
+    : '';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.post" id="apidoc.element.react-render-service.app.post">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>post
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">post = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (toStaticMarkup) {
+  callback(ReactDOMServer.renderToStaticMarkup(element));
+} else {
+  callback(ReactDOMServer.renderToString(element));
+}
+};
+
+app.<span class="apidocCodeKeywordSpan">post</span>('/render', function service(request, response) {
+var toStaticMarkup = request.body.to_static_markup || false;
+var pathToSource = request.body.path_to_source;
+var props = request.body.props || {};
+
+if (!pathToSource) {
+  return response.status(400).send('path_to_source required');
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.prependListener" id="apidoc.element.react-render-service.app.prependListener">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>prependListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prependListener(type, listener) {
+  return _addListener(this, type, listener, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.prependOnceListener" id="apidoc.element.react-render-service.app.prependOnceListener">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>prependOnceListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prependOnceListener(type, listener) {
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+  this.prependListener(type, _onceWrap(this, type, listener));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.propfind" id="apidoc.element.react-render-service.app.propfind">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>propfind
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">propfind = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.proppatch" id="apidoc.element.react-render-service.app.proppatch">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>proppatch
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">proppatch = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.purge" id="apidoc.element.react-render-service.app.purge">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>purge
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">purge = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.put" id="apidoc.element.react-render-service.app.put">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>put
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">put = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.rebind" id="apidoc.element.react-render-service.app.rebind">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>rebind
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rebind = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.removeAllListeners" id="apidoc.element.react-render-service.app.removeAllListeners">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>removeAllListeners
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeAllListeners(type) {
+  var listeners, events;
+
+  events = this._events;
+  if (!events)
+    return this;
+
+  // not listening for removeListener, no need to emit
+  if (!events.removeListener) {
+    if (arguments.length === 0) {
+      this._events = new EventHandlers();
+      this._eventsCount = 0;
+    } else if (events[type]) {
+      if (--this._eventsCount === 0)
+        this._events = new EventHandlers();
+      else
+        delete events[type];
+    }
+    return this;
+  }
+
+  // emit removeListener for all listeners on all events
+  if (arguments.length === 0) {
+    var keys = Object.keys(events);
+    for (var i = 0, key; i &lt; keys.length; ++i) {
+      key = keys[i];
+      if (key === 'removeListener') continue;
+      this.removeAllListeners(key);
+    }
+    this.removeAllListeners('removeListener');
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+    return this;
+  }
+
+  listeners = events[type];
+
+  if (typeof listeners === 'function') {
+    this.removeListener(type, listeners);
+  } else if (listeners) {
+    // LIFO order
+    do {
+      this.removeListener(type, listeners[listeners.length - 1]);
+    } while (listeners[0]);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.removeListener" id="apidoc.element.react-render-service.app.removeListener">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>removeListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeListener(type, listener) {
+  var list, events, position, i, originalListener;
+
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+
+  events = this._events;
+  if (!events)
+    return this;
+
+  list = events[type];
+  if (!list)
+    return this;
+
+  if (list === listener || list.listener === listener) {
+    if (--this._eventsCount === 0)
+      this._events = new EventHandlers();
+    else {
+      delete events[type];
+      if (events.removeListener)
+        this.emit('removeListener', type, list.listener || listener);
+    }
+  } else if (typeof list !== 'function') {
+    position = -1;
+
+    for (i = list.length; i-- &gt; 0;) {
+      if (list[i] === listener || list[i].listener === listener) {
+        originalListener = list[i].listener;
+        position = i;
+        break;
+      }
+    }
+
+    if (position &lt; 0)
+      return this;
+
+    if (list.length === 1) {
+      list[0] = undefined;
+      if (--this._eventsCount === 0) {
+        this._events = new EventHandlers();
+        return this;
+      } else {
+        delete events[type];
+      }
+    } else {
+      spliceOne(list, position);
+    }
+
+    if (events.removeListener)
+      this.emit('removeListener', type, originalListener || listener);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.render" id="apidoc.element.react-render-service.app.render">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>render
+        <span class="apidocSignatureSpan">(name, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function render(name, options, callback) {
+  var cache = this.cache;
+  var done = callback;
+  var engines = this.engines;
+  var opts = options;
+  var renderOptions = {};
+  var view;
+
+  // support callback function as second arg
+  if (typeof options === 'function') {
+    done = options;
+    opts = {};
+  }
+
+  // merge app.locals
+  merge(renderOptions, this.locals);
+
+  // merge options._locals
+  if (opts._locals) {
+    merge(renderOptions, opts._locals);
+  }
+
+  // merge options
+  merge(renderOptions, opts);
+
+  // set .cache unless explicitly provided
+  if (renderOptions.cache == null) {
+    renderOptions.cache = this.enabled('view cache');
+  }
+
+  // primed cache
+  if (renderOptions.cache) {
+    view = cache[name];
+  }
+
+  // view
+  if (!view) {
+    var View = this.get('view');
+
+    view = new View(name, {
+      defaultEngine: this.get('view engine'),
+      root: this.get('views'),
+      engines: engines
+    });
+
+    if (!view.path) {
+      var dirs = Array.isArray(view.root) &amp;&amp; view.root.length &gt; 1
+        ? 'directories "' + view.root.slice(0, -1).join('", "') + '" or "' + view.root[view.root.length - 1] + '"'
+        : 'directory "' + view.root + '"'
+      var err = new Error('Failed to lookup view "' + name + '" in views ' + dirs);
+      err.view = view;
+      return done(err);
+    }
+
+    // prime the cache
+    if (renderOptions.cache) {
+      cache[name] = view;
+    }
+  }
+
+  // render
+  tryRender(view, renderOptions, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (!(pathToSource in cache)) {
+  console.log('[%s] Loading new component %s', new Date().toISOString(), pathToSource);
+  cache[pathToSource] = new Component(pathToSource);
+}
+var component = cache[pathToSource];
+
+component.<span class="apidocCodeKeywordSpan">render</span>(props, toStaticMarkup, function(output) {
+  response.send(output);
+});
+});
+
+app.use(function errorHandler(err, request, response, next) {
+console.log('[' + new Date().toISOString() + '] ' + err.stack);
+response.status(500).send(argv.debug ? err.stack : err.toString());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.report" id="apidoc.element.react-render-service.app.report">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>report
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">report = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.route" id="apidoc.element.react-render-service.app.route">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>route
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function route(path) {
+  this.lazyrouter();
+  return this._router.route(path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.search" id="apidoc.element.react-render-service.app.search">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>search
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">search = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.set" id="apidoc.element.react-render-service.app.set">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>set
+        <span class="apidocSignatureSpan">(setting, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function set(setting, val) {
+  if (arguments.length === 1) {
+    // app.get(setting)
+    return this.settings[setting];
+  }
+
+  debug('set "%s" to %o', setting, val);
+
+  // set value
+  this.settings[setting] = val;
+
+  // trigger matched settings
+  switch (setting) {
+    case 'etag':
+      this.set('etag fn', compileETag(val));
+      break;
+    case 'query parser':
+      this.set('query parser fn', compileQueryParser(val));
+      break;
+    case 'trust proxy':
+      this.set('trust proxy fn', compileTrust(val));
+
+      // trust proxy inherit back-compat
+      Object.defineProperty(this.settings, trustProxyDefaultSymbol, {
+        configurable: true,
+        value: false
+      });
+
+      break;
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.setMaxListeners" id="apidoc.element.react-render-service.app.setMaxListeners">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>setMaxListeners
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setMaxListeners(n) {
+  if (typeof n !== 'number' || n &lt; 0 || isNaN(n))
+    throw new TypeError('"n" argument must be a positive number');
+  this._maxListeners = n;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.subscribe" id="apidoc.element.react-render-service.app.subscribe">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>subscribe
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscribe = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.trace" id="apidoc.element.react-render-service.app.trace">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>trace
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trace = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.unbind" id="apidoc.element.react-render-service.app.unbind">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>unbind
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unbind = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.unlink" id="apidoc.element.react-render-service.app.unlink">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>unlink
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unlink = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.unlock" id="apidoc.element.react-render-service.app.unlock">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>unlock
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unlock = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.unsubscribe" id="apidoc.element.react-render-service.app.unsubscribe">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>unsubscribe
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unsubscribe = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.app.use" id="apidoc.element.react-render-service.app.use">
+        function <span class="apidocSignatureSpan">react-render-service.app.</span>use
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function use(fn) {
+  var offset = 0;
+  var path = '/';
+
+  // default path to '/'
+  // disambiguate app.use([fn])
+  if (typeof fn !== 'function') {
+    var arg = fn;
+
+    while (Array.isArray(arg) &amp;&amp; arg.length !== 0) {
+      arg = arg[0];
+    }
+
+    // first arg is the path
+    if (typeof arg !== 'function') {
+      offset = 1;
+      path = fn;
+    }
+  }
+
+  var fns = flatten(slice.call(arguments, offset));
+
+  if (fns.length === 0) {
+    throw new TypeError('app.use() requires middleware functions');
+  }
+
+  // setup router
+  this.lazyrouter();
+  var router = this._router;
+
+  fns.forEach(function (fn) {
+    // non-express app
+    if (!fn || !fn.handle || !fn.set) {
+      return router.use(path, fn);
+    }
+
+    debug('.use app under %s', path);
+    fn.mountpath = path;
+    fn.parent = this;
+
+    // restore .app property on req and res
+    router.use(path, function mounted_app(req, res, next) {
+      var orig = req.app;
+      fn.handle(req, res, function (err) {
+        setPrototyeOf(req, orig.request)
+        setPrototyeOf(res, orig.response)
+        next(err);
+      });
+    });
+
+    // mounted an app
+    fn.emit('mount', this);
+  }, this);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+.default('whitelist', process.env.REACT_WHITELIST)
+.help('h').alias('h', 'help')
+.argv;
+
+morgan.token('file', function(req, res){ return path.basename(req.body.path_to_source); });
+
+var app = express();
+app.<span class="apidocCodeKeywordSpan">use</span>(bodyParser.json({limit: '50mb'}));
+app.use(morgan('[:date[iso]] :method :url :status :response-time ms - :file :res[content-length]'));
+
+// Component cache living in global scope
+var cache = {};
+
+var Component = function Component(pathToSource) {
+this.pathToSource = pathToSource;
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-render-service.request" id="apidoc.module.react-render-service.request">module react-render-service.request</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.request.app" id="apidoc.element.react-render-service.request.app">
+        function <span class="apidocSignatureSpan">react-render-service.request.</span>app
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">app = function (req, res, next) {
+  app.handle(req, res, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-render-service.response" id="apidoc.module.react-render-service.response">module react-render-service.response</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.response.app" id="apidoc.element.react-render-service.response.app">
+        function <span class="apidocSignatureSpan">react-render-service.response.</span>app
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">app = function (req, res, next) {
+  app.handle(req, res, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-render-service.settings" id="apidoc.module.react-render-service.settings">module react-render-service.settings</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.settings.view" id="apidoc.element.react-render-service.settings.view">
+        function <span class="apidocSignatureSpan">react-render-service.settings.</span>view
+        <span class="apidocSignatureSpan">(name, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function View(name, options) {
+  var opts = options || {};
+
+  this.defaultEngine = opts.defaultEngine;
+  this.ext = extname(name);
+  this.name = name;
+  this.root = opts.root;
+
+  if (!this.ext &amp;&amp; !this.defaultEngine) {
+    throw new Error('No default engine was specified and no extension was provided.');
+  }
+
+  var fileName = name;
+
+  if (!this.ext) {
+    // get extension from default engine name
+    this.ext = this.defaultEngine[0] !== '.'
+      ? '.' + this.defaultEngine
+      : this.defaultEngine;
+
+    fileName += this.ext;
+  }
+
+  if (!opts.engines[this.ext]) {
+    // load engine
+    var mod = this.ext.substr(1)
+    debug('require "%s"', mod)
+    opts.engines[this.ext] = require(mod).__express
+  }
+
+  // store loaded engine
+  this.engine = opts.engines[this.ext];
+
+  // lookup path
+  this.path = this.lookup(fileName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-render-service.settings.view" id="apidoc.module.react-render-service.settings.view">module react-render-service.settings.view</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.settings.view.view" id="apidoc.element.react-render-service.settings.view.view">
+        function <span class="apidocSignatureSpan">react-render-service.settings.</span>view
+        <span class="apidocSignatureSpan">(name, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function View(name, options) {
+  var opts = options || {};
+
+  this.defaultEngine = opts.defaultEngine;
+  this.ext = extname(name);
+  this.name = name;
+  this.root = opts.root;
+
+  if (!this.ext &amp;&amp; !this.defaultEngine) {
+    throw new Error('No default engine was specified and no extension was provided.');
+  }
+
+  var fileName = name;
+
+  if (!this.ext) {
+    // get extension from default engine name
+    this.ext = this.defaultEngine[0] !== '.'
+      ? '.' + this.defaultEngine
+      : this.defaultEngine;
+
+    fileName += this.ext;
+  }
+
+  if (!opts.engines[this.ext]) {
+    // load engine
+    var mod = this.ext.substr(1)
+    debug('require "%s"', mod)
+    opts.engines[this.ext] = require(mod).__express
+  }
+
+  // store loaded engine
+  this.engine = opts.engines[this.ext];
+
+  // lookup path
+  this.path = this.lookup(fileName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-render-service.settings.view.prototype" id="apidoc.module.react-render-service.settings.view.prototype">module react-render-service.settings.view.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.settings.view.prototype.lookup" id="apidoc.element.react-render-service.settings.view.prototype.lookup">
+        function <span class="apidocSignatureSpan">react-render-service.settings.view.prototype.</span>lookup
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lookup(name) {
+  var path;
+  var roots = [].concat(this.root);
+
+  debug('lookup "%s"', name);
+
+  for (var i = 0; i &lt; roots.length &amp;&amp; !path; i++) {
+    var root = roots[i];
+
+    // resolve the path
+    var loc = resolve(root, name);
+    var dir = dirname(loc);
+    var file = basename(loc);
+
+    // resolve the file
+    path = this.resolve(dir, file);
+  }
+
+  return path;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.settings.view.prototype.render" id="apidoc.element.react-render-service.settings.view.prototype.render">
+        function <span class="apidocSignatureSpan">react-render-service.settings.view.prototype.</span>render
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function render(options, callback) {
+  debug('render "%s"', this.path);
+  this.engine(this.path, options, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (!(pathToSource in cache)) {
+  console.log('[%s] Loading new component %s', new Date().toISOString(), pathToSource);
+  cache[pathToSource] = new Component(pathToSource);
+}
+var component = cache[pathToSource];
+
+component.<span class="apidocCodeKeywordSpan">render</span>(props, toStaticMarkup, function(output) {
+  response.send(output);
+});
+});
+
+app.use(function errorHandler(err, request, response, next) {
+console.log('[' + new Date().toISOString() + '] ' + err.stack);
+response.status(500).send(argv.debug ? err.stack : err.toString());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-render-service.settings.view.prototype.resolve" id="apidoc.element.react-render-service.settings.view.prototype.resolve">
+        function <span class="apidocSignatureSpan">react-render-service.settings.view.prototype.</span>resolve
+        <span class="apidocSignatureSpan">(dir, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resolve(dir, file) {
+  var ext = this.ext;
+
+  // &lt;path&gt;.&lt;ext&gt;
+  var path = join(dir, file);
+  var stat = tryStat(path);
+
+  if (stat &amp;&amp; stat.isFile()) {
+    return path;
+  }
+
+  // &lt;path&gt;/index.&lt;ext&gt;
+  path = join(dir, basename(file, ext), 'index' + ext);
+  stat = tryStat(path);
+
+  if (stat &amp;&amp; stat.isFile()) {
+    return path;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
